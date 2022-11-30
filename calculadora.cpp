@@ -1,22 +1,18 @@
 #include <iostream>
 #include <cstring>
 #include <cmath>
-
 using namespace std;
 
-int main(void) {
+int main() {
   char num1[50], num2[50], op_menu[4], exit_menu[4], *end_ptr;
   int valid, op, exit;
   float a, b;
-
   cout << "\nWelcome to the calculator written in C++\n";
-
   beg:
   do {
     cout << "\nType the first number: ";
     fgets(num1, 50, stdin);
     a = strtof(num1, &end_ptr);
-
     if (num1 == end_ptr) {
       cout << "\nError. Please, type a number.\n";
       valid = 0;
@@ -27,7 +23,6 @@ int main(void) {
       valid = 1;
     }
   } while (!valid);
-
   do {
       cout << "\nWhich operation?\n\n1 - Addition\n2 - Subtraction\n3 - Multiplication\n4 - Division\n5 - Percentage\n6 - Power\n\nOption: ";
       fgets(op_menu, 4, stdin);
@@ -39,7 +34,6 @@ int main(void) {
         valid = 1;
       }
   } while (!valid);
-
   mid:
   do {
       cout << "\nType the second number: ";
@@ -55,7 +49,6 @@ int main(void) {
         valid = 1;
       }
   } while (!valid);
-
   switch(op) {
       case 1:
           cout << "\n" << a << " plus " << b << " is equal to: " << a + b << endl;
@@ -81,7 +74,6 @@ int main(void) {
           cout << "\n" << a << " to the power " << b << " is equal to: " << pow(a,b) << endl;
           break;
   }
-
   do {
       cout << "\nDo you wish to continue?\n\n1 - Yes\n2 - No\n\nOption: ";
       fgets(exit_menu, 4, stdin);
