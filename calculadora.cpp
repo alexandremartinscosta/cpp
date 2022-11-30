@@ -81,7 +81,7 @@ int main(void) {
           cout << "\n" << a << " to the power " << b << " is equal to: " << pow(a,b) << endl;
           break;
   }
-  
+
   do {
       cout << "\nDo you wish to continue?\n\n1 - Yes\n2 - No\n\nOption: ";
       fgets(exit_menu, 4, stdin);
@@ -95,6 +95,4 @@ int main(void) {
         valid = 1;
       }
       } while (!valid);
-
-  return 0;
 }
